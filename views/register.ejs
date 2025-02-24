@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | We-Chat</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    "
+  >
+    <div
+      style="
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      "
+    >
+      <img src="../img/lock.png" alt="" style="height: 2rem; width: auto" />
+      <h1 style="color: lightskyblue">We-Chat</h1>
+
+      <p style="color: #666666; margin-bottom: 20px">
+        Register to create an account
+      </p>
+
+      <form action="/register" method="POST">
+        <div style="margin-bottom: 15px">
+          <label
+            for="username"
+            style="
+              display: block;
+              margin-bottom: 7px;
+              color: #666666;
+              text-align: left;
+            "
+            >Username:</label
+          >
+          <input
+            type="text"
+            id="username"
+            name="username"
+            style="
+              width: 100%;
+              padding: 10px;
+              box-sizing: border-box;
+              border: 1px solid #cccccc;
+              border-radius: 5px;
+            "
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="email"
+            style="
+              display: block;
+              margin-bottom: 7px;
+              color: #666666;
+              text-align: left;
+            "
+            >Email:</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            style="
+              width: 100%;
+              padding: 10px;
+              box-sizing: border-box;
+              border: 1px solid #cccccc;
+              border-radius: 5px;
+            "
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="password"
+            style="
+              display: block;
+              margin-bottom: 7px;
+              color: #666666;
+              text-align: left;
+            "
+            >Password:</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            style="
+              width: 100%;
+              padding: 10px;
+              box-sizing: border-box;
+              border: 1px solid #cccccc;
+              border-radius: 5px;
+            "
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          style="
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Register
+        </button>
+      </form>
+      <small>Already a User, <a href="/login">Login</a></small>
+    </div>
+  </body>
+</html>
