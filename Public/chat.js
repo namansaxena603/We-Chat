@@ -2,10 +2,8 @@ const socket = io();
 
 document.addEventListener("DOMContentLoaded", function () {
   const roomList = document.getElementById("room-list");
-  // const roomForm = document.getElementById("room-form");
+
   const roomNameInput = document.getElementById("roomName");
-  // const chatApplication = document.getElementById("chat-application");
-  // const roomSelection = document.getElementById("room-selection");
 
   socket.emit("getRooms");
   socket.on("availableRooms", (rooms) => {
