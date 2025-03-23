@@ -40,7 +40,7 @@ function isAuthenticated(req, res, next) {
   }
 }
 
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); //telling express to use ejs as template view engine
 
 app.get("/login", (req, res) => {
   res.render("login");
@@ -188,6 +188,11 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3000, () => {
-  console.log("Server is running on port 3000 http://localhost:3000");
-});
+// server.listen(3000, () => {
+//   console.log("Server is running on port 3000 http://localhost:3000");
+// });
+
+const port = process.env.PORT || 3000;
+app.listen(port, () =>
+  console.log(`Server running on port ${port} http://localhost:3000`)
+);
